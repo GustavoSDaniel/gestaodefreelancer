@@ -4,8 +4,8 @@ import com.devgustavodaniel.gestaodefreelancer.enums.ProfileType;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "user")
-public  class User {
+@Table(name = "usuario")
+public  class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,14 +21,13 @@ public  class User {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private ProfileType mainProfileType;
-
     @Enumerated(EnumType.STRING)
     private ProfileType secondProfileType;
 
-    public User() {
+    public Usuario() {
     }
 
-    public User(String name, String cpfOrcnpj, String email, String password, ProfileType mainProfileType, ProfileType secondProfileType) {
+    public Usuario(String name, String cpfOrcnpj, String email, String password, ProfileType mainProfileType, ProfileType secondProfileType) {
         this.name = name;
         this.cpfOrcnpj = cpfOrcnpj;
         this.email = email;
