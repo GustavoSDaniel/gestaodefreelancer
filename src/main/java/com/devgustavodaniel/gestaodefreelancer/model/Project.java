@@ -1,13 +1,13 @@
 package com.devgustavodaniel.gestaodefreelancer.model;
 
-import com.devgustavodaniel.gestaodefreelancer.enums.ProjectStatus;
+import com.devgustavodaniel.gestaodefreelancer.model.enums.ProjectStatus;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "projects")
-public class Projects {
+public class Project {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,10 +28,10 @@ public class Projects {
     private Customer customer;
 
 
-    public Projects() {
+    public Project() {
     }
 
-    public Projects(String title, String descrition, LocalDate deadline, Double budget, ProjectStatus projectStatus, Customer customer) {
+    public Project(String title, String descrition, LocalDate deadline, Double budget, ProjectStatus projectStatus, Customer customer) {
         this.title = title;
         this.descrition = descrition;
         this.deadline = deadline;

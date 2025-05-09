@@ -1,11 +1,11 @@
 package com.devgustavodaniel.gestaodefreelancer.model;
 
-import com.devgustavodaniel.gestaodefreelancer.enums.ProfileType;
+import com.devgustavodaniel.gestaodefreelancer.model.enums.ProfileType;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "usuario")
-public  class Usuario {
+@Inheritance(strategy = InheritanceType.JOINED) // PARA CRIAR TABELAS SEPARADAS APARTIR DA SUPER CLASSE
+public  abstract class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

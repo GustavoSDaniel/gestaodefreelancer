@@ -1,4 +1,4 @@
-package com.devgustavodaniel.gestaodefreelancer.enums;
+package com.devgustavodaniel.gestaodefreelancer.model.enums;
 
 public enum ProjectStatus {
 
