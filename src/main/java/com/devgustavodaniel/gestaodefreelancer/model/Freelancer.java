@@ -1,35 +1,25 @@
 package com.devgustavodaniel.gestaodefreelancer.model;
 
-import com.devgustavodaniel.gestaodefreelancer.model.enums.ProfileType;
+import com.devgustavodaniel.gestaodefreelancer.enums.Documento;
+import com.devgustavodaniel.gestaodefreelancer.enums.TipoDePerfil;
 import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
-
-import java.util.List;
 
 @Entity
-@Table(name = "freelancer")
 public class Freelancer extends Usuario{
 
-    public Freelancer() {}
-
-    @OneToMany
-    private List<Project> workingOntheproject;
-
-    public Freelancer(List<Project> workingOntheproject) {
-        this.workingOntheproject = workingOntheproject;
+    public boolean validandoPerfilFreelancer(){
+        return getPerfilPrincipal() == TipoDePerfil.FREELANCER;
     }
 
-    public Freelancer(String name, String cpfOrcnpj, String email, String password, ProfileType mainProfileType, ProfileType secondProfileType, List<Project> workingOntheproject) {
-        super(name, cpfOrcnpj, email, password, mainProfileType, secondProfileType);
-        this.workingOntheproject = workingOntheproject;
+    public boolean validandoDocumentoFreelancer(){
+        return getDocumento() == Documento.CNPJ;
     }
 
-    public List<Project> getWorkingOntheproject() {
-        return workingOntheproject;
+    public Freelancer() {
     }
 
-    public void setWorkingOntheproject(List<Project> workingOntheproject) {
-        this.workingOntheproject = workingOntheproject;
+    public Freelancer(String nomeCompleto, Documento documento, String email, String senha, TipoDePerfil perfilPrincipal, boolean cliente, boolean freelancer, boolean cnpj, boolean cpf) {
+        super(nomeCompleto, documento, email, senha, perfilPrincipal, cliente, freelancer, cnpj, cpf);
     }
+
 }
