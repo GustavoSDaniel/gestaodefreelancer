@@ -22,11 +22,13 @@ Freelancers podem se candidatar aos projetos.
 Uma proposta deve conter o valor ofertado e prazo de entrega estimado.
 O cliente pode aceitar ou recusar propostas.
 Após aceitar uma proposta, o projeto muda para o status Em andamento.
+
 Entrega do Projeto:
 
 O freelancer pode marcar o projeto como Concluído quando terminar o trabalho.
 O cliente deve validar a entrega antes de mudar o status do projeto para Finalizado.
 O cliente pode solicitar ajustes, voltando o status para Em andamento.
+
 Pagamentos:
 
 Simular um gateway de pagamentos para liberar o valor do projeto ao freelancer após a conclusão e aprovação.

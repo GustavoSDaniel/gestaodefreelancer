@@ -13,7 +13,7 @@ import java.util.List;
 @Table(name = "freelancer")
 public class Freelancer extends Usuario{
 
-    @OneToMany(mappedBy = "proposta")
+    @OneToMany(mappedBy = "freelancer")
     private List<Proposta> propostas = new ArrayList<>();
 
     public boolean validandoPerfilFreelancer(){
