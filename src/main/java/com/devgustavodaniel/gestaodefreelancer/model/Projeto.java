@@ -20,5 +20,8 @@ public class Projeto {
     private BigDecimal orcamento;
     @Enumerated(EnumType.STRING)
     private StatusDoProjeto statusDoProjeto;
+    @ManyToOne
+    @JoinColumn(name = "id_cliente")
+    private Cliente cliente;;
 
 }

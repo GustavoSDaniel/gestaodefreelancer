@@ -2,8 +2,19 @@ package com.devgustavodaniel.gestaodefreelancer.model;
 
 import com.devgustavodaniel.gestaodefreelancer.enums.Documento;
 import com.devgustavodaniel.gestaodefreelancer.enums.TipoDePerfil;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table(name = "cliente")
 public class Cliente extends Usuario{
+
+    @OneToMany(mappedBy = "projeto")
+    private List<Projeto> projetoList = new ArrayList<>();
 
     public boolean validandoPerfilCliente() {
         return getPerfilPrincipal() == TipoDePerfil.CLIENTE;
