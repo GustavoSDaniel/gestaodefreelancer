@@ -1,6 +1,5 @@
-package com.devgustavodaniel.gestaodefreelancer.repository;
+package com.devgustavodaniel.gestaodefreelancer.freelancer;
 
-import com.devgustavodaniel.gestaodefreelancer.model.Freelancer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface FreelancerRepository extends JpaRepository<Freelancer, Long> {

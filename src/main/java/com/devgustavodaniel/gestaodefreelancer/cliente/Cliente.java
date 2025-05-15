@@ -1,7 +1,9 @@
-package com.devgustavodaniel.gestaodefreelancer.model;
+package com.devgustavodaniel.gestaodefreelancer.cliente;
 
 import com.devgustavodaniel.gestaodefreelancer.enums.Documento;
 import com.devgustavodaniel.gestaodefreelancer.enums.TipoDePerfil;
+import com.devgustavodaniel.gestaodefreelancer.projeto.Projeto;
+import com.devgustavodaniel.gestaodefreelancer.usuario.Usuario;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
@@ -11,7 +13,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "cliente")
-public class Cliente extends Usuario{
+public class Cliente extends Usuario {
 
     @OneToMany(mappedBy = "cliente")
     private List<Projeto> projetoList = new ArrayList<>();

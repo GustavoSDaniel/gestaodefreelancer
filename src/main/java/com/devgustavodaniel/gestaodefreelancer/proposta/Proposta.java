@@ -1,6 +1,8 @@
-package com.devgustavodaniel.gestaodefreelancer.model;
+package com.devgustavodaniel.gestaodefreelancer.proposta;
 
 import com.devgustavodaniel.gestaodefreelancer.enums.StatusProposta;
+import com.devgustavodaniel.gestaodefreelancer.freelancer.Freelancer;
+import com.devgustavodaniel.gestaodefreelancer.projeto.Projeto;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;

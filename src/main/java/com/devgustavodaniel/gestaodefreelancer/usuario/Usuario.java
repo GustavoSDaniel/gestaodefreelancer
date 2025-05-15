@@ -1,4 +1,4 @@
-package com.devgustavodaniel.gestaodefreelancer.model;
+package com.devgustavodaniel.gestaodefreelancer.usuario;
 
 import com.devgustavodaniel.gestaodefreelancer.enums.Documento;
 import com.devgustavodaniel.gestaodefreelancer.enums.TipoDePerfil;
