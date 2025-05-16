@@ -19,10 +19,10 @@ public abstract class Usuario {
     private String senha;
     @Enumerated(EnumType.STRING)
     private TipoDePerfil perfilPrincipal;
-    private boolean cliente;
-    private boolean freelancer;
-    private boolean cnpj;
-    private boolean cpf;
+    private Boolean cliente;
+    private Boolean freelancer;
+    private Boolean cnpj;
+    private Boolean cpf;
 
     public Usuario() {
     }
